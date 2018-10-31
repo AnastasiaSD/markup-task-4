@@ -1,0 +1,107 @@
+body
+{
+    background-color: mintcream;
+    color: black;
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.card
+{
+    vertical-align: top;
+    border: 1px solid #b5e9a7;
+    border-radius: 5px;
+    background: #fff;
+    margin: 0 20px 20px 0;
+}
+
+.cat-img
+{
+    position: relative;
+    overflow: hidden;
+}
+
+.cat-img img
+{
+    object-fit: cover;
+    transition: transform .4s ease-out;
+}
+
+.card:hover .cat-img img
+{
+    transform: scale(1.05);
+}
+
+.pic-switch
+{
+    width: 35px;
+    height: 35px;
+    display: block;
+    cursor: pointer;
+}
+
+.switch
+{
+    display: none;
+}
+
+.switch:not(:checked) ~ .pic-switch
+{
+    background: url(pics/list.PNG) no-repeat;
+    background-size: contain;
+
+}
+
+.switch:checked ~ .pic-switch
+{
+    background: url(pics/gread.PNG) no-repeat;
+    background-size: contain;
+}
+
+.switch:not(:checked) ~ .card > .cat-info-short
+{
+    display: block;
+}
+
+.switch:not(:checked) ~ .card > .cat-info-full
+{
+    display: none;
+}
+
+.switch:checked ~ .card > .cat-info-short
+{
+    display: none;
+}
+
+.switch:checked ~ .card > .cat-info-full
+{
+    display: block;
+}
+
+.switch:not(:checked) ~ .card
+{
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+}
+
+.switch:checked ~ .card
+{
+    display: block;
+    width: 400px;
+    height: 450px;
+}
+
+.switch:checked ~ .card .cat-img img
+{
+    width: 400px;
+    height: 250px;
+
+}
+
+.switch:not(:checked) ~ .card .cat-img img
+{
+    width: 300px;
+    height: 200px;
+}
