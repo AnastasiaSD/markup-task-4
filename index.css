@@ -1,16 +1,13 @@
 body
 {
     background-color: mintcream;
-    color: black;
     font-family: 'Comic Sans MS', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
 }
 
 .card
 {
     vertical-align: top;
-    border: 1px solid #b5e9a7;
+    border: 2px solid #b5e9a7;
     border-radius: 5px;
     background: #fff;
     margin: 0 20px 20px 0;
@@ -22,13 +19,13 @@ body
     overflow: hidden;
 }
 
-.cat-img img
+img
 {
     object-fit: cover;
     transition: transform .4s ease-out;
 }
 
-.card:hover .cat-img img
+img:hover
 {
     transform: scale(1.05);
 }
@@ -39,11 +36,13 @@ body
     height: 35px;
     display: block;
     cursor: pointer;
+    padding-bottom: 20px;
 }
 
 .switch
 {
     display: none;
+
 }
 
 .switch:not(:checked) ~ .pic-switch
@@ -59,22 +58,22 @@ body
     background-size: contain;
 }
 
-.switch:not(:checked) ~ .card > .cat-info-short
+.switch:not(:checked) ~ .card > .short-info
 {
     display: block;
 }
 
-.switch:not(:checked) ~ .card > .cat-info-full
+.switch:not(:checked) ~ .card > .long-info
 {
     display: none;
 }
 
-.switch:checked ~ .card > .cat-info-short
+.switch:checked ~ .card > .short-info
 {
     display: none;
 }
 
-.switch:checked ~ .card > .cat-info-full
+.switch:checked ~ .card > .long-info
 {
     display: block;
 }
@@ -104,4 +103,74 @@ body
 {
     width: 300px;
     height: 200px;
+}
+
+.card:hover
+{
+    box-shadow: 0 0 10px;
+}
+
+a
+{
+    text-decoration: none;
+    color: #2d2d2d;
+}
+
+h2
+{
+    line-height: 20px;
+    text-shadow: 1px 1px 0 white
+        , 1px -1px 0 white
+        , -1px 1px 0 white
+        , -1px -1px 0 white;
+    color: #2d2d2d;
+    transition: all 1s;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 5px;
+    text-overflow: ellipsis;
+}
+
+h2:hover
+{
+    text-shadow: 1px 1px 0 yellowgreen
+        , 1px -1px 0 yellowgreen
+        , -1px 1px 0 yellowgreen
+        , -1px -1px 0 yellowgreen;
+    color: white;
+}
+
+.age:before
+{
+    content: 'Возраст: ';
+}
+
+.breed:before
+{
+    content: 'Порода: ';
+}
+
+.disease:before
+{
+    content: 'Заболевания: ';
+}
+
+.status:before
+{
+    content: 'Статус: ';
+}
+
+p
+{
+    font-size: 14px;
+    line-height: 14px;
+    color: #2d2d2d;
+    padding-left: 5px;
+}
+
+.long-info p
+{
+    font-size: 16px;
+    line-height: 16px;
 }
