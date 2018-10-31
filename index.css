@@ -13,6 +13,11 @@ body
     margin: 0 20px 20px 0;
 }
 
+.card:hover
+{
+    box-shadow: 0 0 10px;
+}
+
 .cat-img
 {
     position: relative;
@@ -105,11 +110,6 @@ img:hover
     height: 200px;
 }
 
-.card:hover
-{
-    box-shadow: 0 0 10px;
-}
-
 a
 {
     text-decoration: none;
@@ -165,8 +165,16 @@ p
 {
     font-size: 14px;
     line-height: 14px;
-    color: #2d2d2d;
+    font-weight: normal;
+    text-shadow: 0 0 10px #999;
+    color: transparent;
+    transition: all .5s;
     padding-left: 5px;
+}
+
+.cat-info:hover p
+{
+    text-shadow: 0 0 0 #333;
 }
 
 .long-info p
